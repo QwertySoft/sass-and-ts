@@ -20,15 +20,4 @@ form {
     }
 }
 
-%message {
-    border-radius: 3px;
-}
-
-.me {
-    @extend %message;
-    background-color: rgb(87, 137, 87);
-}
-.other {
-    @extend %message;
-    background-color: grey;
-}
+// TODO: aplicar estilos para cada mensaje del chat según sea enviado por mí o por otro
