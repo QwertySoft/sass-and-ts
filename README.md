@@ -1,2 +1,5 @@
 # chat-con-ude-y-qwerty
-Mini sala de chat
+## Setup
+npm i
+cd server
+node server.js
