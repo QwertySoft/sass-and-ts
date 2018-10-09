@@ -8,13 +8,8 @@ server.on('connection', ws => {
     console.log('New connection arrived');
 	ws.on('message', message => {
         try {
-            var data = JSON.parse(message);
-            console.log('New message received >>> ', data);
-			var chatMessage = {
-                user: data.user,
-                message: data.text
-            };
-			broadcast(JSON.stringify(chatMessage));
+            console.log(message);
+			broadcast('Pong >>> ' + new Date());
 		} catch (e) {
 			console.error(e.message);
 		}
