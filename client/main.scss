@@ -1,8 +1,9 @@
-@function squared($n) {
-    @return #{$n * $n}px;
-}
-
 div {
-    height: 30px;
-    width: squared(30);
+    .ping {
+        color: gray;
+    }
+
+    .pong {
+        color: green;
+    }
 }

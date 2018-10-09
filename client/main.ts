@@ -1,7 +1,19 @@
-namespace isolated_scope {
-    export var_exportada: string = "se puede acceder desde afuera";
-    var var_exportada: string = "se puede acceder solo dentro del namespace";
+var socket = new WebSocket('ws://localhost:3000');
+
+function showPing(value) {
+    document.getElementById('dash').innerHTML += `<p class="ping">${value}</p>`
 }
 
-console.log(isolated_scope.var_exportada)
-console.log(isolated_scope.var_exportada)
+function showPong(value) {
+    document.getElementById('dash').innerHTML += `<p class="pong">${value}</p>`
+}
+
+socket.onmessage = function (message) {
+    showPong(message.data);
+    console.log(message.data);
+};
+setInterval(() => {
+    let ping = `Ping >>> ${new Date().toISOString()}`;
+    showPing(ping);
+    socket.send(ping);
+}, 1000);
