@@ -5,16 +5,16 @@ var WebSocketServer = WebSocket.Server;
 var server = new WebSocketServer({ port: port });
 
 server.on('connection', ws => {
-    console.log('new connection');
+    console.log('New connection arrived');
 	ws.on('message', message => {
-        console.log('new message ', message);
-		try {
-            // var data = JSON.parse(message);
-			// var userMessage = {
-            //     name: data.name,
-            //     message: data.text
-            // };
-			broadcast(JSON.stringify(message));
+        try {
+            var data = JSON.parse(message);
+            console.log('New message received >>> ', data);
+			var chatMessage = {
+                user: data.user,
+                message: data.text
+            };
+			broadcast(JSON.stringify(chatMessage));
 		} catch (e) {
 			console.error(e.message);
 		}
