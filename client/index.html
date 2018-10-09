@@ -7,20 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    
-    <script>
-        var socket = new WebSocket('ws://localhost:3000');
-        var user = prompt('Ingrese su nombre completo');
-
-        socket.onmessage = function (message) {
-            console.log(message.data);
-        };
-        setInterval(() => {
-            socket.send(JSON.stringify({user: user, text: 'tick! - ' + new Date()}));
-        }, 1000);
-    </script>
 </head>
 <body>
-    
+    <div id="message_area">
+        
+    </div>
+    <form onsubmit="sendMessage(); return false;" name="form">
+        <input type="text" required="" placeholder="Escribe un mensaje para tu comapañera/o" id="text_data" autofocus="">
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>

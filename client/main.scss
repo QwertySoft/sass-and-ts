@@ -1,8 +1,34 @@
-@function squared($n) {
-    @return #{$n * $n}px;
+#message_area {
+    height: 95vh;
+    background-color: rgb(235, 231, 231);
+    word-break: break-word;
+    overflow-y: scroll;
 }
 
-div {
-    height: 30px;
-    width: squared(30);
+form {
+    height: 5vh;
+    width: 100%;
+}
+
+form {
+    input {
+        width: 88vw;
+    }
+
+    button {
+        width: 10vw;
+    }
+}
+
+%message {
+    border-radius: 3px;
+}
+
+.me {
+    @extend %message;
+    background-color: rgb(87, 137, 87);
+}
+.other {
+    @extend %message;
+    background-color: grey;
 }

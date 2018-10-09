@@ -12,7 +12,8 @@ server.on('connection', ws => {
             console.log('New message received >>> ', data);
 			var chatMessage = {
                 user: data.user,
-                message: data.text
+                message: data.text,
+                date: new Date()
             };
 			broadcast(JSON.stringify(chatMessage));
 		} catch (e) {
