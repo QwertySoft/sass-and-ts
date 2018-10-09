@@ -1,4 +1,4 @@
-# chat-con-ude-y-qwerty
+# sass-y-ts-con-ude-y-qwerty
 ## Setup
     npm i
     cd server
