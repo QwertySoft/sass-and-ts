@@ -8,25 +8,15 @@
 form {
   height: 5vh;
   width: 100%;
+  text-align: center;
+  margin-top: 10px;
 }
 
 form input {
-  width: 88vw;
+  width: 60vw;
 }
 form button {
-  width: 10vw;
-}
-
-.other, .me {
-  border-radius: 3px;
-}
-
-.me {
-  background-color: #578957;
-}
-
-.other {
-  background-color: grey;
+  width: 20vw;
 }
 
 /*# sourceMappingURL=main.css.map */

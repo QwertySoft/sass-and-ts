@@ -8,16 +8,24 @@
 form {
     height: 5vh;
     width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 form {
     input {
-        width: 88vw;
+        width: 60vw;
     }
 
     button {
-        width: 10vw;
+        width: 20vw;
     }
 }
 
-// TODO: aplicar estilos para cada mensaje del chat según sea enviado por mí o por otro
+%message {
+    border-radius: 3px;
+}
+
+// TODO: Agregar clase que extienda de %message y que le de estilos a los mensajes que envia el cliente
+
+// TODO: Agregar clase que extienda de %message y que le de estilos a los mensajes que envian los demás clientes
