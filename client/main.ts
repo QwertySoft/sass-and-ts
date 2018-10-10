@@ -24,7 +24,7 @@ function clearInput(): void {
     (<HTMLInputElement> document.getElementById('text_data')).value = '';
 }
 
-function focus() {
+function focus2() {
     (<HTMLInputElement> document.getElementById('text_data')).focus();
 }
 
@@ -32,7 +32,7 @@ function sendMessage() {
     let formIsValid: boolean = document.forms['form'].checkValidity();
     if (!formIsValid) {
         alert('¡Ingrese un texto!');
-        focus();
+        focus2();
         return;
     }
     let text = (<HTMLInputElement> document.getElementById('text_data')).value;

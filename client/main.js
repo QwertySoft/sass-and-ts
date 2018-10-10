@@ -19,14 +19,14 @@ function getFormatedDate(value) {
 function clearInput() {
     document.getElementById('text_data').value = '';
 }
-function focus() {
+function focus2() {
     document.getElementById('text_data').focus();
 }
 function sendMessage() {
     var formIsValid = document.forms['form'].checkValidity();
     if (!formIsValid) {
         alert('¡Ingrese un texto!');
-        focus();
+        focus2();
         return;
     }
     var text = document.getElementById('text_data').value;
